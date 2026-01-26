@@ -6,18 +6,57 @@
 /*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 12:06:08 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/21 18:19:08 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/26 16:48:02 by hezhou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	int	i;
+	t_list	*tmp;
+	t_list	*pun;
 
-	i = 0;
-	i = 0 + 0;
+	pun = *lst;
+	if (!lst)
+		return ;
+	while (pun)
+	{
+		tmp = pun -> next;
+		del(pun -> content);
+		free(pun);
+		pun = tmp;
+	}
 }
+/*void	ft_lstadd_front(t_list **lst, t_list *new)
+{
+	if (!new || !lst)
+		return ;
+	new -> next = *lst;
+	*lst = new;
+}
+
+void	ft_printlst(t_list *lst)
+{
+	while (lst)
+	{
+		printf("%s\n", (char *)(lst -> content));
+		lst = lst -> next;
+	}
+}
+int	main	(void)
+{
+	char	*a = "Hola";
+	char	*b = ", Me llamo";
+	char	*c = "Ernesto";
+	char	*d = "Puton";
+	t_list	*lista = NULL;
+
+	ft_lstadd_front( &lista, ft_lstnew(a));
+	ft_lstadd_front( &lista, ft_lstnew(b));
+	ft_lstadd_front( &lista, ft_lstnew(c));
+	ft_lstadd_front( &lista, ft_lstnew(d));
+	ft_lstclear(&lista, free);
+	ft_printlst(lista);
+	return (0);
+}*/

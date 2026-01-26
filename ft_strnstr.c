@@ -6,9 +6,11 @@
 /*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 10:43:43 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/15 15:19:06 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/26 18:08:00 by hezhou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

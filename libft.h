@@ -6,7 +6,7 @@
 /*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 13:58:37 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/26 14:38:52 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/26 18:06:59 by hezhou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void *content;
 struct s_list *next;
 }	t_list;
 
+#include <unistd.h>
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
@@ -35,7 +36,7 @@ void	*ft_memchr(void *str, int n, size_t num);
 int	ft_memcmp(const void *str1, const void *str2, size_t count);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t num);
-void	*ft_memset(void *str, int n, size_t num);
+void	*ft_memset(void *str, int n, size_t count);
 char	*ft_strchr(const char *str, int c);
 char	*ft_strdup(const char *strSource);
 char	*ft_strjoin(char const *str1, char const *str2);

@@ -6,11 +6,11 @@
 /*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 14:13:22 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/19 11:41:09 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/26 18:07:34 by hezhou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *c)
 {

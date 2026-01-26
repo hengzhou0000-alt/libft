@@ -6,12 +6,13 @@
 /*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 14:34:02 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/19 11:49:42 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/26 18:07:11 by hezhou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-void	*ft_memset(void *str, int n, size_t num)
+#include "libft.h"
+
+void	*ft_memset(void *str, int c, size_t count)
 {
 	unsigned int	i;
 	char			*dest;

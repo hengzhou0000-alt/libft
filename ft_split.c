@@ -6,7 +6,7 @@
 /*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 11:58:54 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/22 17:21:49 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/26 17:43:16 by hezhou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,8 @@ static void	ft_free(char **str, int i)
 char	**ft_split(char const *str, char c)
 {
 	char	**ret;
-	int		i = 0;
-	int		j = 0;
+	int		i;
+	int		j;
 	int		len;
 
 	ret = malloc((ft_countwords((char *)str, c) + 1) * sizeof(char *));
@@ -105,7 +105,7 @@ char	**ft_split(char const *str, char c)
 {
 	char *str1 = "Hola mundo este es una nota";
 	char **str2;
-	str2 = ft_split(str1, 'a');
+	str2 = ft_split(str1, ' ');
 	printf("%s\n", str2[0]);
 	printf("%s\n", str2[1]);
 	printf("%s\n", str2[2]);
@@ -117,4 +117,4 @@ char	**ft_split(char const *str, char c)
 		free(str2[i]);
 	free(str2);
 	return (0);
-}
+}*/

@@ -6,12 +6,12 @@
 /*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/13 21:07:01 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/15 14:53:39 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/26 18:04:27 by hezhou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*#include <stdio.h>
-#include <unistd.h>*/
+#include "libft.h"
+
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int	i;

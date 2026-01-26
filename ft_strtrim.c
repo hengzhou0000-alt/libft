@@ -6,7 +6,7 @@
 /*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 18:11:10 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/19 11:55:12 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/26 17:39:45 by hezhou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ char	*ft_strtrim(char const *str1, char const *str2)
 	return (ret);
 }
 
-int main(void)
+/*int main(void)
 {
 	char *a1 = "¡¿a1b2c3d4e5f6g7h8i9j10k?!";
 	char *a2 = "¡?¿!1234567890";
@@ -92,4 +92,4 @@ int main(void)
 	a4 = ft_strtrim(a1, a3);
 	printf("%s", a4);
 	return(0);
-}
+}*/

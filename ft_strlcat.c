@@ -6,11 +6,11 @@
 /*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 14:46:41 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/19 11:43:13 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/26 18:03:15 by hezhou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t num)
 {

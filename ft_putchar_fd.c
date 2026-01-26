@@ -6,13 +6,11 @@
 /*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 12:01:25 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/22 17:55:05 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/26 18:02:43 by hezhou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {
