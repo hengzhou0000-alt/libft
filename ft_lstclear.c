@@ -6,7 +6,7 @@
 /*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 12:06:08 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/26 16:48:02 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/27 19:21:05 by hezhou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	t_list	*tmp;
 	t_list	*pun;
 
-	pun = *lst;
-	if (!lst)
+	if (!lst || !del)
 		return ;
+	pun = *lst;
 	while (pun)
 	{
 		tmp = pun -> next;
@@ -27,6 +27,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		free(pun);
 		pun = tmp;
 	}
+	*lst = NULL;
 }
 /*void	ft_lstadd_front(t_list **lst, t_list *new)
 {

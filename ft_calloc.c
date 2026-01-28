@@ -6,35 +6,42 @@
 /*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 15:20:52 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/16 17:43:51 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/28 19:15:09 by hezhou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
+#include <limits.h>
+#include <stdint.h>
 
 void	*ft_calloc(size_t num, size_t n)
 {
-	size_t		i;
-	char		*str;
+	size_t			i;
+	unsigned char	*str;
 
-	i = 0;
 	str = malloc(num * n);
-	while (i < num)
+	if (!str)
+		return (0);
+	i = 0;
+	if (num == 0 || n == 0)
+	{
+		str[i] = 0;
+		return (str);
+	}
+	while (i < (num * n))
 	{
 		str[i] = 0;
 		i++;
 	}
 	return (str);
 }
-/*#include <stdio.h>
-
-int	main(void)
+/*int	main (void)
 {
 	char	*str;
 	int		i;
 
 	i = 0;
-	str = ft_calloc(15, sizeof(char));
+	str = ft_calloc(SIZE_MAX, SIZE_MAX);
 	i = 0;
 	while (i < 20)
 	{

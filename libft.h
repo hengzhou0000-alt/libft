@@ -6,7 +6,7 @@
 /*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 13:58:37 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/26 18:06:59 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/27 19:23:53 by hezhou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@ struct s_list *next;
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <stddef.h>
+#include <limits.h>
+#include <stdint.h>
 
 int	ft_atoi(const char *str);
 void	ft_bzero(void *str, size_t n);

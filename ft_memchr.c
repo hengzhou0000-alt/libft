@@ -6,22 +6,22 @@
 /*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 09:32:24 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/19 11:42:16 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/28 18:54:31 by hezhou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	*ft_memchr(void *str, int n, size_t num)
+void	*ft_memchr(const void *str, int n, size_t num)
 {
-	int		i;
-	char	*p;
+	size_t			i;
+	unsigned char	*p;
 
-	p = (char *)str;
+	p = (unsigned char *) str;
 	i = 0;
-	while (p[i] && i < (int)num)
+	while (i < num)
 	{
-		if (p[i] == n)
+		if (p[i] == (unsigned char)n)
 			return (&p[i]);
 		i++;
 	}

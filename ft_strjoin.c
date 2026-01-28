@@ -6,23 +6,11 @@
 /*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 13:51:30 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/19 18:14:47 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/27 18:52:36 by hezhou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-
-size_t	ft_strlen(const char *c)
-{
-	int	i;
-
-	i = 0;
-	while (c[i])
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strjoin(char const *str1, char const *str2)
 {

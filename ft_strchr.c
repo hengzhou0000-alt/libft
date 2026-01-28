@@ -6,7 +6,7 @@
 /*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 14:34:35 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/19 11:32:50 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/27 16:37:15 by hezhou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,12 @@ char	*ft_strchr(const char *str, int c)
 	i = 0;
 	while (p[i])
 	{
-		if (p[i] == c)
+		if (p[i] == (unsigned char)c)
 			return (&p[i]);
 		i++;
 	}
+	if (p[i] == (unsigned char)c)
+		return (&p[i]);
 	return (0);
 }
 /*int main() 

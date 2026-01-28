@@ -6,7 +6,7 @@
 /*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 11:58:54 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/26 17:43:16 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/27 19:02:41 by hezhou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ char	**ft_split(char const *str, char c)
 		return (NULL);
 	i = 0;
 	j = 0;
-	while (((char *) str)[i])
+	while (((char *) str)[i] && j < ft_countwords((char *)str, c))
 	{
 		while (((char *) str)[i] == c)
 			i++;
@@ -103,7 +103,7 @@ char	**ft_split(char const *str, char c)
 }
 /*int	main (void)
 {
-	char *str1 = "Hola mundo este es una nota";
+	char *str1 = "  tripouille  42    ";
 	char **str2;
 	str2 = ft_split(str1, ' ');
 	printf("%s\n", str2[0]);
