@@ -6,7 +6,7 @@
 /*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 16:53:40 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/29 17:55:03 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/29 18:24:28 by hezhou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	ret = malloc(sizeof(char) * (sizemax + 1));
 	if (!ret)
 		return (0);
-	while (len > 0 && s[start + i])
+	while (sizemax > 0 && s[start + i])
 	{
 		ret[i] = s[start + i];
-		len--;
+		sizemax--;
 		i++;
 	}
 	ret[i] = '\0';

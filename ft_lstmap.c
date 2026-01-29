@@ -6,7 +6,7 @@
 /*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 12:07:04 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/29 18:06:06 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/29 18:10:43 by hezhou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,21 +41,21 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*tmp;
 	int		i;
 
-	Ret = NULL;
+	ret = NULL;
 	if (!lst)
 		return (NULL);
-	Pun = lst;
+	pun = lst;
 	i = ft_lstsize(lst);
 	while (i > 0)
 	{
-		Pun = ft_lsserch(lst, i - 1);
-		tmp = ft_lstnew(f(Pun -> content));
+		pun = ft_lsserch(lst, i - 1);
+		tmp = ft_lstnew(f(pun -> content));
 		if (!tmp)
-			ft_lstclear (&Ret, del);
-		ft_lstadd_front(&Ret, tmp);
+			ft_lstclear (&ret, del);
+		ft_lstadd_front(&ret, tmp);
 		i--;
 	}
-	return (Ret);
+	return (ret);
 }
 /*void	ft_printlst(t_list *lst)
 {

@@ -6,7 +6,7 @@
 /*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/15 14:33:17 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/29 17:39:03 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/29 18:44:43 by hezhou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t num)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	int		j;
 
 	i = 0;
 	j = 1;
-	if (!dest || !src)
-		return (NULL);
-	if (dest > src)
+	if ((!dest && !src) || num == 0)
+		return (dest);
+	if ((char *)dest > (char *)src && (char *)src + num > (char *)dest)
 	{
 		j = -1;
-		i = (int)num - 1;
+		i = num - 1;
 	}
 	while ((int)num > 0)
 	{
