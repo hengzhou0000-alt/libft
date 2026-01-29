@@ -6,7 +6,7 @@
 /*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 11:59:55 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/21 18:07:37 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/29 17:54:16 by hezhou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 static int	ft_countdig(unsigned int n)
 {
-	int	i;
+	unsigned int	i;
 
 	i = 1;
 	while (n > 9)
@@ -27,7 +27,7 @@ static int	ft_countdig(unsigned int n)
 	return (i);
 }
 
-static void	*ft_strdrop(unsigned int n, char *str)
+static void	ft_strdrop(unsigned int n, char *str)
 {
 	int				i;
 	unsigned int	j;
@@ -40,17 +40,16 @@ static void	*ft_strdrop(unsigned int n, char *str)
 		j = j / 10;
 		i--;
 	}
-	str[ft_countdig(n) + 1] = '\0';
-	return (0);
+	str[ft_countdig(n)] = '\0';
+	return ;
 }
 
 char	*ft_itoa(int n)
 {
-	char	*ret;
-	int		j;
+	char			*ret;
+	unsigned int	j;
 
-	if (n >= 0)
-		j = ft_countdig(n);
+	j = ft_countdig(n);
 	if (n < 0)
 		j = ft_countdig(n * -1) + 1;
 	ret = malloc(sizeof(char) * (j + 1));
@@ -59,7 +58,8 @@ char	*ft_itoa(int n)
 	if (n == -2147483648)
 	{
 		ret[0] = '-';
-		ft_strdrop(2147483648, &ret[1]);
+		ret[1] = '2';
+		ft_strdrop(147483648, &ret[2]);
 	}
 	else if (n < 0)
 	{

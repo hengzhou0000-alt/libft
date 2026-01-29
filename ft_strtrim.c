@@ -6,7 +6,7 @@
 /*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 18:11:10 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/26 17:39:45 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/29 17:54:09 by hezhou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,17 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t num)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	int		j;
 
 	i = 0;
 	j = 1;
-	if (dest > src)
+	if ((!dest && !src) || num == 0)
+		return (dest);
+	if ((char *)dest > (char *)src && (char *)src + num > (char *)dest)
 	{
 		j = -1;
-		i = (int)num - 1;
+		i = num - 1;
 	}
 	while ((int)num > 0)
 	{
@@ -34,7 +36,7 @@ void	*ft_memmove(void *dest, const void *src, size_t num)
 	return (((char *)dest));
 }
 
-int	ft_strlen(char *c)
+size_t	ft_strlen(char *c)
 {
 	int	i;
 
@@ -63,6 +65,8 @@ char	*ft_strtrim(char const *str1, char const *str2)
 	char	*ret;
 	int		i;
 
+	if (!str1 || !str2)
+		return (NULL);
 	ret = malloc(sizeof(char) * (ft_strlen((char *) str1) + 1));
 	if (!ret)
 		return (0);

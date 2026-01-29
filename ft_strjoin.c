@@ -6,7 +6,7 @@
 /*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/16 13:51:30 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/27 18:52:36 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/29 17:18:04 by hezhou           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,12 @@
 char	*ft_strjoin(char const *str1, char const *str2)
 {
 	char	*ret;
-	int		i;
-	int		j;
+	size_t	i;
+	size_t	j;
 
-	ret = malloc(sizeof(char) *(ft_strlen(str1) + ft_strlen(str1) + 1));
+	if (!str1 || !str2)
+		return (NULL);
+	ret = malloc(sizeof(char) *(ft_strlen(str1) + ft_strlen(str2) + 1));
 	if (!ret)
 		return (NULL);
 	i = 0;

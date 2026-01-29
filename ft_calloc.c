@@ -1,13 +1,13 @@
 /* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/15 15:20:52 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/28 19:15:09 by hezhou           ###   ########.fr       */
-/*                                                                            */
+/*																			*/
+/*														:::	  ::::::::   */
+/*   ft_calloc.c										:+:	  :+:	:+:   */
+/*													+:+ +:+		 +:+	 */
+/*   By: hezhou <hezhou@student.42.fr>			  +#+  +:+	   +#+		*/
+/*												+#+#+#+#+#+   +#+		   */
+/*   Created: 2026/01/15 15:20:52 by hezhou			#+#	#+#			 */
+/*   Updated: 2026/01/29 17:12:36 by hezhou		   ###   ########.fr	   */
+/*																			*/
 /* ************************************************************************** */
 
 #include "libft.h"
@@ -18,17 +18,16 @@ void	*ft_calloc(size_t num, size_t n)
 {
 	size_t			i;
 	unsigned char	*str;
+	size_t			total;
 
-	str = malloc(num * n);
+	if (n != 0 && num > SIZE_MAX / n)
+		return (NULL);
+	total = num * n;
+	str = malloc(total);
 	if (!str)
-		return (0);
+		return (NULL);
 	i = 0;
-	if (num == 0 || n == 0)
-	{
-		str[i] = 0;
-		return (str);
-	}
-	while (i < (num * n))
+	while (i < total)
 	{
 		str[i] = 0;
 		i++;
