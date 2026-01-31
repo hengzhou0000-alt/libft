@@ -3,26 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: agcarbaj <agcarbaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 12:00:14 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/22 17:19:53 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/31 16:17:20 by agcarbaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *c)
-{
-	int	i;
-
-	i = 0;
-	while (c[i])
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strmapi(char const *str, char (*f)(unsigned int, char))
 {

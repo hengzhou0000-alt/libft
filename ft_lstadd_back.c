@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: agcarbaj <agcarbaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 12:05:24 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/26 15:14:02 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/31 16:03:38 by agcarbaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,20 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*tmp;
 
-	tmp = *lst;
-	if (!lst || !new)
+	if (!new || !lst)
 		return ;
-	tmp = ft_lstlast(tmp);
-	tmp -> next = new;
+	tmp = ft_lstlast(*lst);
+	if (tmp)
+		tmp -> next = new;
+	else
+		*lst = new;
 }
+
+/*int	main(void)
+{
+	ft_lstadd_back(NULL, ft_lstnew(ft_strdup("a")));
+}*/
+
 /*void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!new || !lst)

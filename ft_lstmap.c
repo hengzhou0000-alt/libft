@@ -3,24 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hezhou <hezhou@student.42.fr>              +#+  +:+       +#+        */
+/*   By: agcarbaj <agcarbaj@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 12:07:04 by hezhou            #+#    #+#             */
-/*   Updated: 2026/01/29 18:10:43 by hezhou           ###   ########.fr       */
+/*   Updated: 2026/01/31 16:11:41 by agcarbaj         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
-{
-	if (!new || !lst)
-		return ;
-	new -> next = *lst;
-	*lst = new;
-}
-
-t_list	*ft_lsserch(t_list *lst, int i)
+static t_list	*ft_lsserch(t_list *lst, int i)
 {
 	if (!lst)
 		return (NULL);
